@@ -198,6 +198,11 @@
 
     /* Featured header: text left, visual right */
     .work-card.featured .work-card-header {
+      display: block !important;
+      grid-template-columns: none !important;
+      gap: 0 !important;
+    }
+    .work-card.featured.has-visual .work-card-header {
       display: grid;
       grid-template-columns: 1.5fr 1fr;
       gap: 2rem;
@@ -247,11 +252,11 @@
 
     /* Expandable drawer */
     .work-card-drawer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
+      display: none;
     }
-    .work-card.open .work-card-drawer { max-height: 600px; }
+    .work-card.open > .work-card-drawer {
+      display: block;
+    }
 
     .work-card-drawer-inner {
       border-top: 1px solid var(--border);
@@ -500,101 +505,95 @@
                 <span class="meta-toggle">View Sample <span class="arrow">↓</span></span>
               </div>
             </div>
-            <div class="card-visual"><span>{ }</span></div>
+          
           </div>
           <div class="work-card-drawer">
             <div class="work-card-drawer-inner">
               <div>
                 <p class="drawer-label">Documents</p>
                 <div class="drawer-links" onclick="event.stopPropagation()">
-                  <a class="drawer-link" href="https://placeholder-link.com" target="_blank">
+                  <a class="drawer-link" href="https://docs.zebra.com/us/en/mobile-computers/handheld/tc5-series/fr55-product-reference-guide/c-fr55-touch-computer.html" target="_blank">
                     <span>FR55 Product Reference Guide</span>
-                    <span class="drawer-link-meta">Product Reference &nbsp;
+                    <span class="drawer-link-meta">View &nbsp;
                       <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </span>
                   </a>
-                  <a class="drawer-link" href="https://placeholder-link.com" target="_blank">
+                  <a class="drawer-link" href="https://docs.zebra.com/us/en/mobile-computers/handheld/tc5-series/fr55-qsg-en/c-fr55-touch-computer-quick-start-guide.html" target="_blank">
                     <span>FR55 Quick Start Guide</span>
-                    <span class="drawer-link-meta">Quick Start &nbsp;
+                    <span class="drawer-link-meta">View &nbsp;
                       <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </span>
                   </a>
-                  <a class="drawer-link" href="https://placeholder-link.com" target="_blank">
+                  <a class="drawer-link" href="https://www.zebra.com/content/dam/support-dam/en/documentation/unrestricted/guide/regulatory/fr55-rg-en.pdf" target="_blank">
                     <span>FR55 Regulatory Guide</span>
-                    <span class="drawer-link-meta">Regulatory &nbsp;
+                    <span class="drawer-link-meta">View &nbsp;
                       <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </span>
-                  </a>
-                  <!-- Add more links here following the same pattern -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                  </a>    <!-- TC501 -->
+    <a class="drawer-link" href="https://docs.zebra.com/us/en/mobile-computers/handheld/tc5-series/tc501-prg/c-tc501-landing-page.html" target="_blank">
+      <span>TC501 Product Reference Guide</span>
+      <span class="drawer-link-meta">View &nbsp;
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
 
-        <!-- Card 2: Featured -->
-        <div class="work-card featured" onclick="toggleCard(this)">
-          <div class="work-card-header">
-            <div>
-              <p class="type">Internal Training Guide</p>
-              <h3>Structured Authoring Guide Revamp</h3>
-              <p>Worked in a team of 3 to enable a full overhaul of Zebra's internal authoring guide — improving consistency and efficiency across all documentation processes and establishing shared standards for structure, terminology, and voice.</p>
-              <div class="meta">
-                <span>Zebra Technologies · 2025–Present</span>
-                <span class="meta-toggle">View Sample <span class="arrow">↓</span></span>
-              </div>
-            </div>
-            <div class="card-visual"><span>✎</span></div>
-          </div>
-          <div class="work-card-drawer">
-            <div class="work-card-drawer-inner">
-              <div>
-                <p class="drawer-label">Documents</p>
-                <div class="drawer-links" onclick="event.stopPropagation()">
-                  <a class="drawer-link" href="https://placeholder-link.com" target="_blank">
-                    <span>Structured Authoring Guide</span>
-                    <span class="drawer-link-meta">Internal Guide &nbsp;
-                      <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
-                  </a>
-                  <!-- Add more links here following the same pattern -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <a class="drawer-link" href="https://docs.zebra.com/us/en/mobile-computers/handheld/tc5-series/tc501-qsg/c-tc501-landing-page-qsg.html" target="_blank">
+      <span>TC501 Quick Start Guide</span>
+      <span class="drawer-link-meta">View &nbsp;
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+     <!-- TC701 -->
+    <a class="drawer-link" href="https://docs.zebra.com/us/en/mobile-computers/handheld/tc7-series/tc701-prg/c-tc701-landing-page.html" target="_blank">
+      <span>TC701 Product Reference Guide</span>
+      <span class="drawer-link-meta">View &nbsp;
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+    <a class="drawer-link" href="https://docs.zebra.com/us/en/mobile-computers/handheld/tc7-series/tc701-qsg/c-tc701-landing-page-qsg.html" target="_blank">
+      <span>TC701 Quick Start Guide</span>
+      <span class="drawer-link-meta">View &nbsp;
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+   <a class="drawer-link" href="https://www.zebra.com/content/dam/support-dam/en/documentation/unrestricted/guide/regulatory/tc501-tc701-wlan-rg-en.pdf" target="_blank">
+      <span>TC501/TC701 Regulatory Guide</span>
+      <span class="drawer-link-meta">View &nbsp;
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+    <!-- ZEC500 -->
+    <a class="drawer-link" href="https://docs.zebra.com/us/en/kiosks/zec500-product-reference-guide/c-zec500-product-reference-guide.html" target="_blank">
+      <span>ZEC500 Product Reference Guide</span>
+      <span class="drawer-link-meta">View &nbsp;
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
 
-        <!-- Card 3 -->
-        <div class="work-card" onclick="toggleCard(this)">
-          <div class="work-card-header">
-            <p class="type">Documentation Triage</p>
-            <h3>Long-Standing Issue Resolution</h3>
-            <p>Closed multiple pending documentation cases that had gone unresolved for over two years — all within the first quarter of employment. Diagnosed root causes, corrected content, and updated all affected deliverables.</p>
-            <div class="meta">
-              <span>Zebra Technologies · 2024</span>
-              <span class="meta-toggle">View Sample <span class="arrow">↓</span></span>
-            </div>
-          </div>
-          <div class="work-card-drawer">
-            <div class="work-card-drawer-inner">
-              <div>
-                <p class="drawer-label">Documents</p>
-                <div class="drawer-links" onclick="event.stopPropagation()">
-                  <a class="drawer-link" href="https://placeholder-link.com" target="_blank">
-                    <span>Issue Resolution Example</span>
-                    <span class="drawer-link-meta">Case Study &nbsp;
-                      <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
-                  </a>
+    <a class="drawer-link" href="https://docs.zebra.com/us/en/kiosks/bm-zec500-quick-start-guide-ditamap/c-zec500-quick-start-guide.html" target="_blank">
+      <span>ZEC500 Quick Start Guide</span>
+      <span class="drawer-link-meta">View &nbsp;
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+
+    <a class="drawer-link" href="https://www.zebra.com/content/dam/support-dam/en/documentation/unrestricted/guide/regulatory/zec500-rg-en.pdf" target="_blank">
+      <span>ZEC500 Regulatory Guide</span>
+      <span class="drawer-link-meta">View &nbsp;
+        <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+
+  </div>
                   <!-- Add more links here following the same pattern -->
                 </div>
               </div>
             </div>
           </div>
-        </div>
+
 
         <!-- Card 4 -->
-        <div class="work-card" onclick="toggleCard(this)">
+        <div class="work-card featured" onclick="toggleCard(this)">
           <div class="work-card-header">
             <p class="type">API & Software Documentation</p>
             <h3>User, Admin & API References</h3>
@@ -634,38 +633,59 @@
           </div>
         </div>
 
-        <!-- Card 5: AI Initiative -->
-        <div class="work-card featured" onclick="toggleCard(this)">
+        <!-- Card 2 -->
+        <div class="work-card" onclick="toggleCard(this)">
           <div class="work-card-header">
             <div>
-              <p class="type">AI Initiative</p>
-              <h3>Automating Reviews</h3>
-              <p>WIP — leading an initiative to train AI agents to review documentation with a click, reducing manual review cycles and improving consistency at scale.</p>
+              <p class="type">Internal Training Guide</p>
+              <h3>Structured Authoring Guide Revamp</h3>
+              <p>Worked in a team of 3 to enable a full overhaul of Zebra's internal authoring guide — improving consistency and efficiency across all documentation processes and establishing shared standards for structure, terminology, and voice.</p>
               <div class="meta">
-                <span>Zebra Technologies · Ongoing</span>
-                <span class="meta-toggle">View Sample <span class="arrow">↓</span></span>
-              </div>
-            </div>
-            <div class="card-visual"><span>⚙</span></div>
-          </div>
-          <div class="work-card-drawer">
-            <div class="work-card-drawer-inner">
-              <div>
-                <p class="drawer-label">Documents</p>
-                <div class="drawer-links" onclick="event.stopPropagation()">
-                  <a class="drawer-link" href="https://placeholder-link.com" target="_blank">
-                    <span>Coming soon</span>
-                    <span class="drawer-link-meta">WIP &nbsp;
-                      <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </span>
-                  </a>
-                  <!-- Add more links here following the same pattern -->
-                </div>
+                <span>Zebra Technologies · 2025–Present</span>
               </div>
             </div>
           </div>
         </div>
 
+        <!-- Card 3 -->
+        <div class="work-card" onclick="toggleCard(this)">
+          <div class="work-card-header">
+            <p class="type">Documentation Triage</p>
+            <h3>Long-Standing Issue Resolution</h3>
+            <p>Closed multiple pending documentation cases that had gone unresolved for over two years — all within the first quarter of employment. Diagnosed root causes, corrected content, and updated all affected deliverables.</p>
+            <div class="meta">
+              <span>Zebra Technologies · 2024</span>
+                    </div>
+          </div>
+          
+        </div>
+
+        <!-- Card 5 -->
+        <div class="work-card" onclick="toggleCard(this)">
+          <div class="work-card-header">
+            <div>
+              <p class="type">AI Initiative</p>
+              <h3>Automating Reviews</h3>
+              <p>Leading an initiative to train AI agents to review documentation based on Zebra's internal style guide, reducing manual review cycles and improving consistency at scale.</p>
+              <div class="meta">
+                <span>Zebra Technologies · Ongoing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+  <!-- Card 6 -->
+        <div class="work-card" onclick="toggleCard(this)">
+          <div class="work-card-header">
+            <div>
+              <p class="type">Streamlining Processes</p>
+              <h3>Bulk Outputting</h3>
+              <p>Discovered and implemented a more efficient method for generating bulk documentation outputs, saving the team hundreds of hours annually.</p>
+              <div class="meta">
+                <span>Zebra Technologies · 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -818,14 +838,16 @@
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     function toggleCard(card) {
+      const drawer = card.querySelector(':scope > .work-card-drawer');
       const isOpen = card.classList.contains('open');
       document.querySelectorAll('.work-card.open').forEach(c => c.classList.remove('open'));
-      if (!isOpen) {
-        card.classList.add('open');
-        setTimeout(() => {
-          card.querySelector('.work-card-drawer').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 420);
+      if (!drawer || isOpen) {
+        return;
       }
+      card.classList.add('open');
+      setTimeout(() => {
+        drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 420);
     }
 
     function showPage(id) {
