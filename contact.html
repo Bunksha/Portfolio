@@ -1,89 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Michael Bunker</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-
-  <nav>
-    <a class="nav-logo" href="index.html"><span>//</span> michael bunker</a>
-    <ul class="nav-links">
-      <li><a href="index.html"   id="nav-home">Home</a></li>
-      <li><a href="work.html"    id="nav-work">Work</a></li>
-      <li><a href="hobbies.html" id="nav-hobbies">Hobbies</a></li>
-      <li><a href="now.html"     id="nav-now">Now</a></li>
-      <li><a href="contact.html" id="nav-contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <div class="container animate">
-      <div class="contact-layout">
-
-        <!-- Left: info -->
-        <div class="contact-left">
-          <span class="label">Get in Touch</span>
-          <h2>Let's work<br>together.</h2>
-          <p>
-            I'm available for freelance projects and open to new opportunities. If you've got
-            complex technical content that needs to make sense to real people, I'd love to
-            hear about it.
-          </p>
-          <p>I typically respond within 48 hours.</p>
-
-          <ul class="contact-list">
-            <li>
-              <span class="c-label">Email</span>
-              <a href="mailto:michael.bunker@example.com">michael.bunker@example.com</a>
-            </li>
-            <li>
-              <span class="c-label">Phone</span>
-              <a href="tel:+19894936146">+1 (989) 493-6146</a>
-            </li>
-            <li>
-              <span class="c-label">Location</span>
-              <span class="location-muted">Illinois, USA</span>
-            </li>
-          </ul>
+<section class="page" id="page-contact">
+  <div class="container">
+    <div class="contact-layout">
+      <div class="contact-left">
+        <h2>Let's talk.</h2>
+        <ul class="contact-list">
+          <li><span class="c-label">Email</span> <a href="mailto:hello@michaelbunker.com">hello@michaelbunker.com</a></li>
+          <li><span class="c-label">LinkedIn</span> <a href="#">/in/michaelbunker</a></li>
+        </ul>
+      </div>
+      <form class="contact-form">
+        <div class="form-row">
+          <label>Name</label>
+          <input type="text" placeholder="Your name">
         </div>
-
-        <!-- Right: form -->
-        <div class="contact-form">
-          <div class="form-row">
-            <label for="f-name">Name</label>
-            <input type="text" id="f-name" name="name" placeholder="Your name" autocomplete="name" required />
-          </div>
-          <div class="form-row">
-            <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" placeholder="your@email.com" autocomplete="email" required />
-          </div>
-          <div class="form-row">
-            <label for="f-subject">Subject</label>
-            <input type="text" id="f-subject" name="subject" placeholder="What's this about?" />
-          </div>
-          <div class="form-row">
-            <label for="f-message">Message</label>
-            <textarea id="f-message" name="message" placeholder="Tell me about your project, timeline, and what you need..."></textarea>
-          </div>
-          <div>
-            <button class="btn btn-fill" type="button" onclick="handleSubmit()">Send Message</button>
-          </div>
-        </div>
-
-      </div><!-- /.contact-layout -->
-    </div><!-- /.container -->
-  </main>
-
+        <!-- Other form fields -->
+      </form>
+    </div>
+  </div>
   <footer>
     <p>© 2026 Michael Bunker</p>
     <p class="footer-mark">writing docs even grandma can follow.</p>
   </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+</section>
