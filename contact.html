@@ -44,14 +44,15 @@
           </ul>
         </div>
 
-        <form class="contact-form" onsubmit="handleSubmit(event)">
+        <!-- Added onsubmit to trigger the JavaScript function -->
+        <form action="https://formspree.io/f/your-unique-id" method="POST" class="contact-form" onsubmit="handleSubmit(event)">
           <div class="form-row">
             <label for="f-name">Name</label>
-            <input type="text" id="f-name" name="name" placeholder="Your name" />
+            <input type="text" id="f-name" name="name" placeholder="Your name" required />
           </div>
           <div class="form-row">
             <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" placeholder="your@email.com" />
+            <input type="email" id="f-email" name="email" placeholder="your@email.com" required />
           </div>
           <div class="form-row">
             <label for="f-subject">Subject</label>
@@ -59,7 +60,7 @@
           </div>
           <div class="form-row">
             <label for="f-message">Message</label>
-            <textarea id="f-message" name="message" placeholder="Tell me about your project, timeline, and what you need..."></textarea>
+            <textarea id="f-message" name="message" placeholder="Tell me about your project, timeline, and what you need..." required></textarea>
           </div>
           <div>
             <button class="btn btn-fill" type="submit">Send Message</button>
