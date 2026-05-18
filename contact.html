@@ -44,28 +44,44 @@
           </ul>
         </div>
 
-        <!-- Added onsubmit to trigger the JavaScript function -->
-        <form action="https://formspree.io/f/your-unique-id" method="POST" class="contact-form" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <label for="f-name">Name</label>
-            <input type="text" id="f-name" name="name" placeholder="Your name" required />
-          </div>
-          <div class="form-row">
-            <label for="f-email">Email</label>
-            <input type="email" id="f-email" name="email" placeholder="your@email.com" required />
-          </div>
-          <div class="form-row">
-            <label for="f-subject">Subject</label>
-            <input type="text" id="f-subject" name="subject" placeholder="What's this about?" />
-          </div>
-          <div class="form-row">
-            <label for="f-message">Message</label>
-            <textarea id="f-message" name="message" placeholder="Tell me about your project, timeline, and what you need..." required></textarea>
-          </div>
-          <div>
-            <button class="btn btn-fill" type="submit">Send Message</button>
-          </div>
-        </form>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+  <!-- Required Access Key -->
+  <input type="hidden" name="access_key" value="ab18880c-9915-4725-9efa-cfa8f529046d" />
+  
+  <!-- Web3Forms Customizations -->
+  <!-- This changes the email subject dynamically to include the sender's name -->
+  <input type="hidden" name="subject" value="New Contact Form Submission" />
+  <!-- This makes the email "From" name match the person who submitted the form -->
+  <input type="hidden" name="from_name" value="MichaelBunker.com Contact Form" />
+
+  <!-- Name Field -->
+  <div class="form-row">
+    <label for="f-name">Name</label>
+    <input type="text" id="f-name" name="name" required />
+  </div>
+  
+  <!-- Email Field -->
+  <div class="form-row">
+    <label for="f-email">Email</label>
+    <input type="email" id="f-email" name="email" required />
+  </div>
+
+  <!-- NEW: Subject Field for the User -->
+  <div class="form-row">
+    <label for="f-subject">Subject</label>
+    <input type="text" id="f-subject" name="subject" required />
+  </div>
+
+  <!-- Message Field -->
+  <div class="form-row">
+    <label for="f-message">Message</label>
+    <textarea id="f-message" name="message" required></textarea>
+  </div>
+  
+  <div>
+    <button class="btn btn-fill" type="submit">Submit Form</button>
+  </div>
+</form>
       </div>
     </div>
     <footer>
