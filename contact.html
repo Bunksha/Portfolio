@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Michael Bunker</title>
+  <meta name="description" content="Contact Michael Bunker — Technical Writer & Content Specialist. Available for freelance projects and new opportunities in documentation and AI.">
+  <meta property="og:title" content="Michael Bunker — Contact">
+  <meta property="og:description" content="Get in touch with Michael Bunker for technical writing, documentation, and content strategy projects.">
+  <link rel="canonical" href="https://michaelbunker.com/contact.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=DM+Mono&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <nav>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav aria-label="Main navigation">
     <a href="index.html" class="nav-logo"><span>//</span> michael bunker</a>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
@@ -20,6 +26,7 @@
     </ul>
   </nav>
 
+  <main id="main-content">
   <section class="page" id="page-contact">
     <div class="container">
       <div class="contact-layout">
@@ -34,12 +41,12 @@
               <a href="mailto:michaelbunker41@gmail.com">michaelbunker41@gmail.com</a>
             </li>
             <li>
-              <span class="c-label">Phone</span>
-              <a href="tel:+19894936146">+1 (989) 493-6146</a>
-            </li>
-            <li>
               <span class="c-label">Location</span>
               <span style="color:var(--muted)">Illinois, USA</span>
+            </li>
+            <li>
+              <span class="c-label">LinkedIn</span>
+              <a href="https://linkedin.com/in/michaelbunker" target="_blank" rel="noopener noreferrer">linkedin.com/in/michaelbunker</a>
             </li>
           </ul>
         </div>
@@ -49,29 +56,29 @@
   
   <div class="form-row">
     <label for="f-name">Name</label>
-    <input type="text" id="f-name" name="name" required />
+    <input type="text" id="f-name" name="name" required aria-required="true" />
   </div>
   
   <div class="form-row">
     <label for="f-email">Email</label>
-    <input type="email" id="f-email" name="email" required />
+    <input type="email" id="f-email" name="email" required aria-required="true" />
   </div>
 
   <div class="form-row">
     <label for="f-subject">Subject</label>
-    <input type="text" id="f-subject" name="subject" required />
+    <input type="text" id="f-subject" name="subject" required aria-required="true" />
   </div>
 
   <div class="form-row">
     <label for="f-message">Message</label>
-    <textarea id="f-message" name="message" required></textarea>
+    <textarea id="f-message" name="message" required aria-required="true"></textarea>
   </div>
   
   <div>
     <button class="btn btn-fill" type="submit">Submit Form</button>
   </div>
 
-  <div id="form-result" style="margin-top: 1rem; font-family: var(--mono); font-size: 0.9rem;"></div>
+  <div id="form-result" role="status" aria-live="polite" style="margin-top: 1rem; font-family: var(--mono); font-size: 0.9rem;"></div>
 </form>
       </div>
     </div>
@@ -80,6 +87,7 @@
       <p class="footer-mark">writing docs even grandma can follow.</p>
     </footer>
   </section>
+  </main>
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 </body>

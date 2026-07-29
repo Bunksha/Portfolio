@@ -1,7 +1,25 @@
-﻿*, *::before, *::after { 
+*, *::before, *::after { 
   box-sizing: border-box; 
   margin: 0; 
   padding: 0; 
+}
+
+/* Skip to content link for keyboard users */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  z-index: 200;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
 }
 
 :root {
@@ -64,6 +82,16 @@ nav {
 /* FIXED: Replaced corrupted bullet character */
 .nav-links a.active::after { content: ' •'; color: var(--accent); }
 
+/* Focus indicators for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 /* LAYOUT & VISIBILITY */
 /* If you are on a dedicated page like work.html, the section needs to be visible */
 .page { 
@@ -117,6 +145,7 @@ h1 em { font-style: italic; color: var(--accent); }
   transition: all 0.2s;
 }
 .btn:hover { background: var(--ink); color: var(--bg); }
+.btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .btn-fill { background: var(--ink); color: var(--bg); }
 .btn-fill:hover { background: var(--accent); border-color: var(--accent); }
 
@@ -323,6 +352,11 @@ h1 em { font-style: italic; color: var(--accent); }
 .work-card:hover { border-color: var(--ink); }
 .work-card.open  { border-color: var(--ink); }
 .work-card.featured { grid-column: span 2; }
+
+/* Ensure keyboard-accessible cards look interactive */
+[role="button"] {
+  cursor: pointer;
+}
 
 .work-card-header { padding: 2rem; }
 

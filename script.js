@@ -39,11 +39,30 @@ if (form) {
     });
   });
 }
+
+/**
+ * Toggle work card expand/collapse with proper ARIA state management.
+ * Accepts either a DOM element or the event from keydown.
+ */
 function toggleCard(cardElement) {
-    cardElement.classList.toggle('open');
-    const arrow = cardElement.querySelector('.arrow');
+    // If we received an event object (from keydown handler), get the target
+    if (cardElement && typeof cardElement === 'object' && cardElement.tagName) {
+      // Check if this looks like an event object by checking for key property
+      if (cardElement.key) {
+        cardElement = cardElement.currentTarget;
+      }
+    }
+    
+    const card = cardElement.closest ? cardElement.closest('.work-card') : cardElement;
+    if (!card) return;
+    
+    const isOpen = card.classList.toggle('open');
+    const arrow = card.querySelector('.arrow');
+    
+    // Update ARIA attributes for accessibility
+    card.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    
     if (arrow) {
-        arrow.style.transform = cardElement.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+        arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
     }
 }
-
