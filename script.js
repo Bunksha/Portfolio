@@ -56,6 +56,19 @@ function toggleCard(cardElement) {
     const card = cardElement.closest ? cardElement.closest('.work-card') : cardElement;
     if (!card) return;
     
+    // Close any other open cards first (accordion behavior)
+    const allCards = document.querySelectorAll('.work-card.open');
+    allCards.forEach(otherCard => {
+        if (otherCard !== card) {
+            otherCard.classList.remove('open');
+            otherCard.setAttribute('aria-expanded', 'false');
+            const otherArrow = otherCard.querySelector('.arrow');
+            if (otherArrow) {
+                otherArrow.style.transform = 'rotate(0deg)';
+            }
+        }
+    });
+    
     const isOpen = card.classList.toggle('open');
     const arrow = card.querySelector('.arrow');
     

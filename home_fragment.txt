@@ -1,0 +1,63 @@
+﻿<section class="page active" id="page-home">
+    <div class="container">
+      <div class="home-hero">
+        <div class="hero-text">
+          <p class="hero-label">Technical Writer & Content Specialist</p>
+          <h1>Words that make<br>complex things <em>click.</em></h1>
+          <p class="hero-body">
+            I communicate across teams to blend information together to enhance a user's experience with products. Currently at Zebra Technologies, where I've shipped 5+ major documentation projects in my first year. Also leading an AI initiative to train Agents to review documentation with a click.
+          </p>
+          <div class="hero-ctas">
+            <button class="btn btn-fill" onclick="showPage('work')">See My Work</button>
+            <button class="btn" onclick="showPage('contact')">Get in Touch</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="img-frame-wrap">
+            <div class="img-frame">
+              <img src="michaelbunker.jpg" alt="Michael Bunker" style="width:100%;height:100%;object-fit:cover;position:relative;z-index:1;" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="skills-strip">
+        <span class="skill-tag pop">DITA / XML</span>
+        <span class="skill-tag">API Documentation</span>
+        <span class="skill-tag pop">Adobe FrameMaker</span>
+        <span class="skill-tag">Adobe AEM</span>
+        <span class="skill-tag">Regulatory Guides</span>
+        <span class="skill-tag pop">Quick Start Guides</span>
+        <span class="skill-tag">Admin & User Docs</span>
+        <span class="skill-tag">Style Guides</span>
+        <span class="skill-tag pop">InDesign</span>
+        <span class="skill-tag">Illustrator</span>
+        <span class="skill-tag">Photoshop</span>
+        <span class="skill-tag">Premiere Pro</span>
+        <span class="skill-tag pop">Microsoft Office Suite</span>
+      </div>
+
+      <hr class="divider" />
+
+      <div class="about-strip">
+        <div class="about-block">
+          <h3>Background</h3>
+          <p>Michigan Tech grad in Scientific & Technical Communications. Currently a Technical Documentation Specialist at Zebra Technologies, focused on mobile hardware and software product documentation, AI fine-tuning, and enabling content reuse.</p>
+        </div>
+        <div class="about-block">
+          <h3>Approach</h3>
+          <p>I write my documentation like Aristotle would â€” using rhetorical appeals. Why would a reader use my docs? Would a reader be frustrated following any of the steps? Is my documentation structured logically?</p>
+        </div>
+        <div class="about-block">
+          <h3>Toolkit</h3>
+          <p>Critical thinking skills, DITA, XML, AEM, the full Adobe Creative Cloud suite, and a strong appreciation for a well-built style guide. Comfortable across hardware and software domains.</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Â© 2026 Michael Bunker</p>
+      <p class="footer-mark">writing docs even grandma can follow.</p>
+    </footer>
+  </section>

@@ -1,0 +1,51 @@
+﻿<section class="page" id="page-hobbies">
+    <div class="container">
+      <div class="hobbies-intro">
+        <p class="label">Outside the Docs</p>
+        <h2>The rest of me.</h2>
+        <p>The things I do when the laptop is closed â€” some of which have made me a significantly better writer, whether I intended that or not.</p>
+      </div>
+
+      <div class="hobbies-list">
+        <div class="hobby-card">
+          <span class="hobby-icon">âœˆï¸</span>
+          <h3>Travel</h3>
+          <p>There's nothing like navigating a country where you don't speak the language to appreciate the value of clear, universal communication design. Every trip teaches me something new about good UX.</p>
+          
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-icon">ðŸ“·</span>
+          <h3>Photography</h3>
+          <p>Composition, light, and the patience to wait for the right moment. Photography and technical writing share more DNA than people think â€” both are about knowing what to leave out.</p>
+       
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-icon">ðŸ–¥ï¸</span>
+          <h3>PC Building</h3>
+          <p>The best way to write documentation is to do the process first, and then again while taking note of the steps.</p>
+         </div>
+        <div class="hobby-card">
+          <span class="hobby-icon">ðŸŽ®</span>
+          <h3>Gaming</h3>
+          <p>A long-running hobby that's taught me more about onboarding UX than any textbook. The best games never make you feel lost. The worst ones desperately need a technical writer on the team.</p>
+          
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-icon">ðŸ‚</span>
+          <h3>Snowboarding</h3>
+          <p>Learning something physically demanding from scratch is a good reminder of what it feels like to be a confused first-time user. Humbling in exactly the right way.</p>
+     
+        </div>
+        <div class="hobby-card">
+          <span class="hobby-icon">ðŸ¥¾</span>
+          <h3>Hiking & Weightlifting</h3>
+          <p>One clears the head, the other focuses it. A lot of documentation problems solve themselves quietly on a trail or between sets â€” highly recommend both.</p>
+
+        </div>
+      </div>
+   
+    <footer>
+      <p>Â© 2026 Michael Bunker</p>
+      <p class="footer-mark">writing docs even grandma can follow.</p>
+    </footer>
+  </section>

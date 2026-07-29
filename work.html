@@ -37,7 +37,7 @@
       <div class="work-grid">
 
         <!-- Card 1: Featured -->
-        <div class="work-card featured" tabindex="0" role="button" aria-expanded="false" aria-label="Regulatory, Quick Start & Product Reference Guides — Zebra Technologies" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard(this)}">
+        <div class="work-card featured" tabindex="0" role="button" aria-expanded="false" aria-label="Regulatory, Quick Start & Product Reference Guides — Zebra Technologies" onclick="toggleCard(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard(this)}">
           <div class="work-card-header">
             <div>
               <p class="type">Mobile Hardware Documentation</p>
@@ -54,7 +54,7 @@
             <div class="work-card-drawer-inner">
               <div>
                 <p class="drawer-label">Documents</p>
-                <div class="drawer-links">
+                <div class="drawer-links" onclick="event.stopPropagation()">
                   <a class="drawer-link" href="https://docs.zebra.com/us/en/mobile-computers/handheld/tc5-series/fr55-product-reference-guide/c-fr55-touch-computer.html" target="_blank" rel="noopener noreferrer">
                     <span>FR55 Product Reference Guide</span>
                     <span class="drawer-link-meta">View &nbsp;
@@ -123,12 +123,12 @@
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
+           </div>
+           </div>
+         </div>
 
-
-        <!-- Card 2: API & Software Documentation -->
-        <div class="work-card featured" tabindex="0" role="button" aria-expanded="false" aria-label="API & Software Documentation" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard(this)}">
+         <!-- Card 2: API & Software Documentation -->
+        <div class="work-card featured" tabindex="0" role="button" aria-expanded="false" aria-label="API & Software Documentation" onclick="toggleCard(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard(this)}">
           <div class="work-card-header">
             <p class="type">API & Software Documentation</p>
             <h3>User, Admin & API References</h3>
@@ -142,7 +142,7 @@
             <div class="work-card-drawer-inner">
               <div>
                 <p class="drawer-label">Documents</p>
-                <div class="drawer-links">
+                <div class="drawer-links" onclick="event.stopPropagation()">
                   <a class="drawer-link" href="#" rel="noopener noreferrer">
                     <span>API Reference Guide</span>
                     <span class="drawer-link-meta">API Docs &nbsp;
@@ -168,7 +168,7 @@
         </div>
 
         <!-- Card 3: Internal Training Guide -->
-        <div class="work-card" tabindex="0" role="button" aria-expanded="false" aria-label="Internal Training Guide Revamp" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard(this)}">
+        <div class="work-card">
           <div class="work-card-header">
             <div>
               <p class="type">Internal Training Guide</p>
@@ -182,7 +182,7 @@
         </div>
 
         <!-- Card 4: Documentation Triage -->
-        <div class="work-card" tabindex="0" role="button" aria-expanded="false" aria-label="Long-Standing Issue Resolution" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard(this)}">
+        <div class="work-card">
           <div class="work-card-header">
             <p class="type">Documentation Triage</p>
             <h3>Long-Standing Issue Resolution</h3>
@@ -195,7 +195,7 @@
         </div>
 
         <!-- Card 5: AI Initiative -->
-        <div class="work-card" tabindex="0" role="button" aria-expanded="false" aria-label="Automating Reviews — AI Initiative" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard(this)}">
+        <div class="work-card">
           <div class="work-card-header">
             <div>
               <p class="type">AI Initiative</p>
@@ -209,7 +209,7 @@
         </div>
 
         <!-- Card 6: Streamlining Processes -->
-        <div class="work-card" tabindex="0" role="button" aria-expanded="false" aria-label="Bulk Outputting — Process Improvement" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCard(this)}">
+        <div class="work-card">
           <div class="work-card-header">
             <div>
               <p class="type">Streamlining Processes</p>

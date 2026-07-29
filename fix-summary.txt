@@ -1,0 +1,60 @@
+Problem:
+- The original page `index (1).html` contained the complete design system for the website, including the layout rules and component styles for the Hobbies, Now, and Contact sections.
+- When the project was split into separate files (`hobbies.html`, `now.html`, and `contact.html`), those pages kept the HTML content but did not include the page-specific CSS styles from the original template.
+- Because the separate pages were relying only on a generic `style.css`, the most important visual definitions were missing. This caused the content to appear unstyled or only partially styled, which is why the pages did not match the original visual design.
+- Additional issues included corrupt UTF-8 characters in the HTML content: mis-encoded en/em dashes, bullets, emojis, and copyright symbols. These artifacts were visible in the rendered page text and are common when files are moved between editors or generated from badly encoded sources.
+
+Why this matters:
+- Separate HTML pages must still share the same style definitions as the original template. The browser does not automatically copy layout rules from one HTML file to another.
+- A single-page template can hide problems because all of its styles are in one place. Once you split into multiple pages, each page must have the correct shared CSS and the page-specific rules for the sections it contains.
+- Responsive behavior also needs to be repeated in the shared stylesheet if the new pages are expected to collapse correctly on smaller screens.
+
+Fix implemented:
+1. Added missing page-specific CSS to `style.css`
+   - `hobbies.html` needed styling for the hobby grid, hobby cards, icons, and text hierarchy.
+     - Added `.hobbies-intro` for the intro content spacing.
+     - Added `.hobbies-list` with a grid layout and gap.
+     - Added `.hobby-card` for the card surfaces, borders, padding, and typography.
+     - Added `.hobby-icon` for consistent emoji/icon presentation.
+   - `now.html` needed section structure and spacing styles.
+     - Added `.now-page` for section padding.
+     - Added `.subtitle` for the secondary page text.
+     - Added `.now-section` for dividing content and adding consistent spacing between sections.
+     - Added list styling so feature bullets display correctly and read like the original template.
+   - `contact.html` needed layout and form styling.
+     - Added `.contact-layout` to create a two-column presentation similar to the original design.
+     - Added `.contact-left` and `.contact-form` content spacing.
+     - Added `.contact-list`, `.c-label`, and `form-row` styling so the contact details and form fields look polished.
+2. Added missing responsive rules to `style.css`
+   - Ensured `.hobbies-list` collapses to one column on mobile.
+   - Ensured `.contact-layout` becomes a single column on smaller screens.
+   - Kept the navigation and container padding responsive.
+3. Normalized encoding issues in the HTML files
+   - Replaced malformed character sequences with valid UTF-8 characters.
+   - Example fixes: `â€”` → `—`, `â€¢`/`Â·` → `·`, `Â©` → `©`, broken emoji text sequences replaced with actual emoji characters.
+4. Standardized page boilerplate
+   - Ensured each HTML page includes the same head metadata:
+     - `<!DOCTYPE html>`
+     - `<html lang="en">`
+     - `<meta charset="UTF-8" />`
+     - `<meta name="viewport" content="width=device-width, initial-scale=1.0" />`
+     - Google font import link
+     - shared stylesheet link (`style.css`)
+     - deferred `script.js` link
+
+Result and lessons:
+- The pages now render with the original visual structure and spacing from `index (1).html`.
+- The Hobbies page has card-based blocks with consistent icon styling.
+- The Now page has section dividers and readable list/list spacing.
+- The Contact page has a balanced two-column layout and polished form controls.
+- The key learning is that splitting a single-page template into multiple HTML files requires both:
+  - shared global styles, and
+  - page-specific component styles that the original template already defined.
+- If a page appears wrong after splitting, first compare the shared CSS and page-specific CSS with the original template, then inspect the HTML for encoding or missing structural classes.
+
+Study tips:
+- Treat the original `index (1).html` as the source of truth for layout and style.
+- When rebuilding single-page designs into separate pages, copy the CSS rules along with the HTML structure.
+- Use consistent class names and keep shared typography/colors in `:root` variables.
+- Keep page-specific content inside semantic sections and use CSS grid or flexbox for layout.
+- Always verify encoding when transferring content between files or systems.

@@ -341,17 +341,44 @@ h1 em { font-style: italic; color: var(--accent); }
 .contact-form button { align-self: flex-start; }
 
 /* WORK GRID & CARDS */
-.work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; padding-bottom: 5rem; }
+.work-grid { 
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2rem; 
+  padding-bottom: 5rem; 
+}
 
 .work-card {
   background: var(--card-bg);
   border: 1px solid var(--border);
-  cursor: pointer;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  border-radius: 4px;
 }
-.work-card:hover { border-color: var(--ink); }
-.work-card.open  { border-color: var(--ink); }
-.work-card.featured { grid-column: span 2; }
+/* Only cards with expandable drawers (.featured) are interactive */
+.work-card.featured { cursor: pointer; }
+.work-card.featured:hover {
+  border-color: var(--ink);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.work-card.featured.open {
+  border-color: var(--ink);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Non-featured cards: natural height, 1 column each (pairs side by side) */
+.work-card:not(.featured) {
+  /* natural height based on content - each card takes its own space in the 2-col grid */
+}
+
+/* Featured cards with sample drop-downs: full width, each on its own row */
+.work-card.featured {
+  grid-column: span 2;
+}
+
+/* Ensure work cards have consistent minimum height for visual alignment */
+.work-card-header {
+  min-height: 80px;
+}
 
 /* Ensure keyboard-accessible cards look interactive */
 [role="button"] {
@@ -412,9 +439,18 @@ h1 em { font-style: italic; color: var(--accent); }
 }
 .work-card.open .meta-toggle .arrow { transform: rotate(180deg); }
 
-/* Expandable drawer */
-.work-card-drawer { display: none; }
-.work-card.open > .work-card-drawer { display: block; }
+/* Expandable drawer - use opacity/height transition for smooth animation */
+.work-card-drawer { 
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out, opacity 0.3s ease;
+  opacity: 0;
+}
+.work-card.open > .work-card-drawer { 
+  max-height: 1200px;
+  opacity: 1;
+}
 
 .work-card-drawer-inner {
   border-top: 1px solid var(--border);
@@ -430,22 +466,41 @@ h1 em { font-style: italic; color: var(--accent); }
   margin-bottom: 0.75rem;
 }
 
-.drawer-links { display: flex; flex-direction: column; gap: 0; }
+.drawer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
 .drawer-link {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.6rem;
   font-family: var(--mono);
   font-size: 0.7rem;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--ink);
   text-decoration: none;
-  padding: 0.7rem 0;
-  border-bottom: 1px solid var(--border);
-  transition: color 0.2s;
+  padding: 0.9rem 1rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
 }
-.drawer-link:first-child { border-top: 1px solid var(--border); }
-.drawer-link:hover { color: var(--accent); }
+.drawer-link span:first-child { line-height: 1.4; }
+.drawer-link-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--accent);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+}
+.drawer-link:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+.drawer-link:hover .drawer-link-meta { color: var(--ink); }
 
 /* FOOTER */
 footer { border-top: 1px solid var(--border); padding: 2rem; display: flex; justify-content: space-between; align-items: center; }
