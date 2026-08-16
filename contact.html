@@ -7,8 +7,11 @@
   <meta name="description" content="Contact Michael Bunker — Technical Writer & Content Specialist. Available for freelance projects and new opportunities in documentation and AI.">
   <meta property="og:title" content="Michael Bunker — Contact">
   <meta property="og:description" content="Get in touch with Michael Bunker for technical writing, documentation, and content strategy projects.">
+  <meta property="og:image" content="https://michaelbunker.com/michaelbunker.jpg">
   <link rel="canonical" href="https://michaelbunker.com/contact.html">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=DM+Mono&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
@@ -54,6 +57,9 @@
     <form id="contact-form" class="contact-form">
   <input type="hidden" name="access_key" value="ab18880c-9915-4725-9efa-cfa8f529046d" />
   
+  <!-- Web3Forms bot protection honeypot -->
+  <input type="text" name="botcheck" value="" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; width:1px; height:1px;" />
+  
   <div class="form-row">
     <label for="f-name">Name</label>
     <input type="text" id="f-name" name="name" required aria-required="true" />
@@ -82,13 +88,11 @@
 </form>
       </div>
     </div>
-    <footer>
-      <p>© 2026 Michael Bunker</p>
-      <p class="footer-mark">writing docs even grandma can follow.</p>
-    </footer>
   </section>
   </main>
-
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <footer>
+    <p>© 2026 Michael Bunker</p>
+    <p class="footer-mark">writing docs even grandma can follow.</p>
+  </footer>
 </body>
 </html>

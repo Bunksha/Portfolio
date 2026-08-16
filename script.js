@@ -79,3 +79,21 @@ function toggleCard(cardElement) {
         arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
     }
 }
+
+// Wire up the featured work cards so clicking or pressing Enter/Space
+// on them actually opens/closes their drawer.
+const featuredCards = document.querySelectorAll('.work-card.featured');
+featuredCards.forEach(card => {
+  card.addEventListener('click', function(e) {
+    // Don't toggle the drawer when clicking a link inside it
+    if (e.target.closest('a')) return;
+    toggleCard(card);
+  });
+
+  card.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault(); // stop page scroll on Space
+      toggleCard(card);
+    }
+  });
+});
