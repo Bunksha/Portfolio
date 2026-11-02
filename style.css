@@ -26,7 +26,7 @@
   --bg:        #F7F5F0;
   --ink:       #1A1A18;
   --muted:     #5F5F57;
-  --accent:    #C85A2A;
+  --accent:    #A8461F; /* darkened from #C85A2A: 5.4:1 on --bg, passes WCAG AA for small text */
   --accent2:   #3D6B5A;
   --card-bg:   #EEEAE2;
   --border:    #D8D3C8;
@@ -217,9 +217,13 @@ h1 em { font-style: italic; color: var(--accent); }
   color: var(--accent);
   margin-bottom: 1rem;
 }
+.page-header h1,
 .page-header h2,
+.now-page h1,
 .now-page h2,
+.hobbies-intro h1,
 .hobbies-intro h2,
+.contact-left h1,
 .contact-left h2 {
   font-family: var(--serif);
   font-size: clamp(2rem, 4vw, 2.8rem);
@@ -302,8 +306,10 @@ h1 em { font-style: italic; color: var(--accent); }
   gap: 3rem;
   padding: 4rem 0 3rem;
 }
+.contact-left h1,
 .contact-left h2,
 .contact-left p { margin: 0; }
+.contact-left h1,
 .contact-left h2 { margin-bottom: 1.25rem; }
 .contact-left p { margin-bottom: 1.3rem; }
 .contact-list { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1rem; }
@@ -503,6 +509,8 @@ h1 em { font-style: italic; color: var(--accent); }
 /* FOOTER */
 footer { border-top: 1px solid var(--border); padding: 2rem; display: flex; justify-content: space-between; align-items: center; }
 footer p { font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted); }
+footer a { color: var(--muted); }
+footer a:hover { color: var(--accent); }
 footer .footer-mark { font-family: var(--serif); font-style: italic; color: var(--accent); font-size: 0.9rem; }
 
 /* ANIMATIONS */
@@ -537,4 +545,47 @@ footer .footer-mark { font-family: var(--serif); font-style: italic; color: var(
     animation: none !important;
     transition: none !important;
   }
+}
+/* HOME SECTIONS */
+.home-section { padding: 0 0 3rem; }
+.home-section h2 {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
+}
+.home-section .about-strip { padding-bottom: 2rem; }
+
+/* RESUME */
+.resume-section { margin-bottom: 2.75rem; }
+.resume-section > h2 {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1.4rem;
+}
+.resume-item { margin-bottom: 1.6rem; }
+.resume-item h3 { font-family: var(--serif); font-weight: 400; font-size: 1.25rem; margin-bottom: 0.2rem; }
+.resume-item .resume-meta {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+.resume-item ul { padding-left: 1.2rem; margin: 0; }
+.resume-item li { margin-bottom: 0.45rem; font-size: 0.97rem; }
+.resume-item p { font-size: 0.97rem; }
+
+@media print {
+  nav, footer, .no-print { display: none !important; }
+  body { background: #fff; }
+  .page { padding-top: 0; min-height: auto; }
+  .page .container > * { animation: none; }
 }
