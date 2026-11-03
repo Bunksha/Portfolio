@@ -520,7 +520,15 @@ footer .footer-mark { font-family: var(--serif); font-style: italic; color: var(
 }
 .page.active .container > *, .page .container > * { animation: fadeUp 0.45s ease both; }
 
-/* RESPONSIVE */
+/* RESPONSIVE: tablets and small laptops */
+@media (max-width: 900px) {
+  nav { padding: 0 1.25rem; }
+  .nav-links { gap: 1.2rem; }
+  .contact-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .about-strip { gap: 1.25rem; }
+}
+
+/* RESPONSIVE: phones */
 @media (max-width: 680px) {
   nav { height: auto; min-height: var(--nav-h); flex-wrap: wrap; gap: 0.6rem; padding: 0.75rem 1rem; }
   .nav-links { gap: 0.9rem; }
@@ -536,6 +544,18 @@ footer .footer-mark { font-family: var(--serif); font-style: italic; color: var(
   .container { padding: 0 1.2rem; }
   nav { padding: 0 1rem; }
   .nav-links { gap: 0.9rem; flex-wrap: wrap; }
+  .nav-links a { padding: 0.35rem 0; display: inline-block; }
+  .page { padding-top: 7rem; }
+  .work-card.featured.has-visual .work-card-header { grid-template-columns: 1fr; }
+  .card-visual { height: 100px; }
+  footer { flex-wrap: wrap; gap: 0.5rem 1rem; padding: 1.5rem 1.2rem; }
+  .form-row input, .form-row textarea { font-size: 1rem; }
+  .home-hero { padding: 3.5rem 0 3rem; }
+  .page-header { padding: 3rem 0 2rem; }
+}
+
+@media (max-width: 420px) {
+  .page { padding-top: 8.5rem; }
 }
 
 /* ACCESSIBILITY: respect reduced-motion preferences */
