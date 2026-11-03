@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F7F5F0">
+  <title>Projects — Michael Bunker</title>
+  <meta name="description" content="Michael Bunker's personal projects — a dual-GPU local AI workstation, a style guide checker, and a wrist-mounted cyberdeck. Built on my own time, separate from my work at Zebra Technologies.">
+  <meta property="og:title" content="Michael Bunker — Personal Projects">
+  <meta property="og:description" content="Side projects and personal builds: local AI hardware, documentation tooling, and a wrist-mounted cyberdeck.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://michaelbunker.net/projects.html">
+  <meta property="og:image" content="https://michaelbunker.net/michaelbunker.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Portrait of Michael Bunker">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Michael Bunker — Personal Projects">
+  <meta name="twitter:description" content="Side projects and personal builds: local AI hardware, documentation tooling, and a wrist-mounted cyberdeck.">
+  <meta name="twitter:image" content="https://michaelbunker.net/michaelbunker.jpg">
+  <meta name="twitter:image:alt" content="Portrait of Michael Bunker">
+  <link rel="canonical" href="https://michaelbunker.net/projects.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=DM+Mono&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav aria-label="Main navigation">
+    <a href="index.html" class="nav-logo"><span>//</span> michael bunker</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="projects.html" class="active" aria-current="page">Projects</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="hobbies.html">Hobbies</a></li>
+      <li><a href="now.html">Now</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+  <section class="page" id="page-projects">
+    <div class="container">
+      <div class="page-header">
+        <p class="label">Personal Projects</p>
+        <h1>Built on my<br>own time.</h1>
+        <p>Side projects and personal builds &mdash; separate from my 9-to-5 at Zebra Technologies. This is where documentation, local AI, and hardware tinkering meet.</p>
+      </div>
+
+      <div class="work-grid">
+        <div class="work-card">
+          <div class="work-card-header">
+            <div>
+              <p class="type">Local AI</p>
+              <h3>Dual-GPU Local AI Workstation</h3>
+              <p>I built a self-hosted AI workstation around two passive NVIDIA Tesla V100s &mdash; 64GB of VRAM &mdash; cooled by a custom 20&deg; fan shroud I designed and 3D-printed for the cards. It runs open-weight models locally with Ollama (a 27B model at a 262,000-token context window) and ComfyUI for image generation, all on my own hardware &mdash; and the shroud holds both cards through 12-plus-hour days of inference and coding-agent sessions. It's the testbed behind my AI documentation experiments.</p>
+              <div class="meta">
+                <span>Personal Build &middot; 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-card-header">
+            <div>
+              <p class="type">Tooling &mdash; Style Guide Checker</p>
+              <h3>Second Pass</h3>
+              <p>A from-scratch recreation, on my own time and with no company material, of a style-checking concept I first built at work. This version runs Python rules against big published style guides like Microsoft's; the rules are tested against real guide text, and my local AI setup helps me iterate on them. Still in active development.</p>
+              <div class="meta">
+                <span>Personal Project &middot; In Progress</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-card">
+          <div class="work-card-header">
+            <div>
+              <p class="type">Hardware Build</p>
+              <h3>Wrist-Mounted Cyberdeck</h3>
+              <p>A computer that lives on my left forearm: a Raspberry Pi 5 (8GB) mounted to a 7-inch touchscreen on a hinge, so the display flips up when I need it and folds flat when I don't. The forearm saddle &mdash; foam-lined, held on with straps &mdash; carries an integrated power bank and a sliding tray for a folding Bluetooth keyboard. Every mount is designed and 3D-printed by me; currently at the fit-test stage for the saddle.</p>
+              <div class="meta">
+                <span>Personal Build &middot; In Progress</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Michael Bunker</p>
+    <p><a href="https://linkedin.com/in/michaelbunker" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot; <a href="https://github.com/Bunksha" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+    <p class="footer-mark">writing docs even grandma can follow.</p>
+  </footer>
+</body>
+</html>
