@@ -219,8 +219,6 @@ h1 em { font-style: italic; color: var(--accent); }
 }
 .page-header h1,
 .page-header h2,
-.now-page h1,
-.now-page h2,
 .hobbies-intro h1,
 .hobbies-intro h2,
 .contact-left h1,
@@ -233,7 +231,6 @@ h1 em { font-style: italic; color: var(--accent); }
 }
 .page-header p,
 .hobbies-intro p,
-.now-page .subtitle,
 .contact-left p {
   color: var(--muted);
   font-size: 0.97rem;
@@ -277,27 +274,6 @@ h1 em { font-style: italic; color: var(--accent); }
   margin-bottom: 0;
 }
 .hobby-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.75; }
-
-/* NOW */
-.now-page { padding: 4rem 0 3rem; }
-.subtitle { color: var(--muted); font-size: 0.95rem; margin-top: 0.75rem; max-width: 640px; }
-.now-section {
-  border-top: 1px solid var(--border);
-  padding: 2rem 0 0;
-}
-.now-section:first-of-type { padding-top: 0; border-top: none; }
-.now-section h3 {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent2);
-  margin-bottom: 0.8rem;
-}
-.now-section p,
-.now-section li { color: var(--muted); font-size: 0.97rem; line-height: 1.8; }
-.now-section ul { padding-left: 1.2rem; margin: 0; list-style: disc; }
-.now-section li { margin-bottom: 0.85rem; }
 
 /* CONTACT */
 .contact-layout {
@@ -546,7 +522,6 @@ footer .footer-mark { font-family: var(--serif); font-style: italic; color: var(
   .hobbies-list { grid-template-columns: 1fr; }
   .contact-layout { grid-template-columns: 1fr; }
   .contact-form { width: 100%; }
-  .now-page { padding: 3rem 0 2rem; }
   .container { padding: 0 1.2rem; }
   nav { padding: 0 1rem; }
   .nav-links { gap: 0.9rem; flex-wrap: wrap; }

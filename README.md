@@ -15,7 +15,6 @@ the domain is registered through Wix, which provides DNS only.
 | `work.html` | Work — professional writing at Zebra Technologies |
 | `projects.html` | Projects — personal builds (local AI workstation, Second Pass, wrist-mounted cyberdeck) |
 | `hobbies.html` | Hobbies — PC building, 3D printing, gaming, and more |
-| `now.html` | Now — what I'm focused on at the moment |
 | `contact.html` | Contact — form via Web3Forms |
 | `404.html` | Custom not-found page |
 
