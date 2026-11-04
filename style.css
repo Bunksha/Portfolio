@@ -492,13 +492,19 @@ h1 em { font-style: italic; color: var(--accent); }
 }
 .drawer-link span:first-child { line-height: 1.4; }
 .drawer-link-meta {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.3rem 0.8rem;
   color: var(--accent);
   font-size: 0.65rem;
   text-transform: uppercase;
 }
+.drawer-link-meta a {
+  color: inherit;
+  text-decoration: none;
+}
+.drawer-link-meta a:hover { text-decoration: underline; }
 .drawer-link:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
@@ -576,32 +582,6 @@ footer .footer-mark { font-family: var(--serif); font-style: italic; color: var(
   margin-bottom: 0.5rem;
 }
 .home-section .about-strip { padding-bottom: 2rem; }
-
-/* RESUME */
-.resume-section { margin-bottom: 2.75rem; }
-.resume-section > h2 {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.6rem;
-  margin-bottom: 1.4rem;
-}
-.resume-item { margin-bottom: 1.6rem; }
-.resume-item h3 { font-family: var(--serif); font-weight: 400; font-size: 1.25rem; margin-bottom: 0.2rem; }
-.resume-item .resume-meta {
-  font-family: var(--mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.6rem;
-}
-.resume-item ul { padding-left: 1.2rem; margin: 0; }
-.resume-item li { margin-bottom: 0.45rem; font-size: 0.97rem; }
-.resume-item p { font-size: 0.97rem; }
 
 @media print {
   nav, footer, .no-print { display: none !important; }
